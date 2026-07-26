@@ -11,3 +11,7 @@ next-env.d.ts
 
 # Local Claude Code settings (per-machine)
 .claude/settings.local.json
+
+# Static export output & deploy archives
+/out
+*.zip

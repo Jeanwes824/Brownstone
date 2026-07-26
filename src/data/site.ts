@@ -18,6 +18,12 @@ export const site = {
     phone: "+63 917 160 9764",
     phoneHref: "tel:+639171609764",
   },
+  // Contact form delivery (Web3Forms — free, no backend required).
+  // 1. Go to https://web3forms.com, enter the email that should receive
+  //    inquiries, and copy the Access Key they send you.
+  // 2. Paste it below (replacing YOUR_WEB3FORMS_ACCESS_KEY) and redeploy.
+  // Until a real key is set, the form will show a friendly error on submit.
+  web3formsAccessKey: "YOUR_WEB3FORMS_ACCESS_KEY",
   social: {
     facebook: "#",
     linkedin: "#",

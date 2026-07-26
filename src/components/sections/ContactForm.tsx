@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ButtonAction } from "@/components/ui/Button";
 import { services } from "@/data/services";
+import { site } from "@/data/site";
 import { Send, CheckCircle2, Loader2 } from "lucide-react";
 
 type Status = "idle" | "submitting" | "success" | "error";
@@ -34,14 +35,30 @@ export function ContactForm() {
     setErrors(validation);
     if (Object.keys(validation).length > 0) return;
 
+    if (site.web3formsAccessKey === "YOUR_WEB3FORMS_ACCESS_KEY") {
+      // No access key configured yet — fail clearly instead of pretending to send.
+      setStatus("error");
+      return;
+    }
+
     setStatus("submitting");
     try {
-      const res = await fetch("/api/contact", {
+      const payload = {
+        access_key: site.web3formsAccessKey,
+        subject: "New inquiry from Brownstone website",
+        from_name: "Brownstone Website",
+        ...Object.fromEntries(data.entries()),
+      };
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(Object.fromEntries(data.entries())),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
       });
-      if (!res.ok) throw new Error("Request failed");
+      const result = await res.json();
+      if (!res.ok || !result.success) throw new Error("Request failed");
       setStatus("success");
       form.reset();
     } catch {

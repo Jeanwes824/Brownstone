@@ -71,20 +71,6 @@ export function Contact() {
                 </li>
               </ul>
             </div>
-
-            {/* Map placeholder */}
-            <div className="flex h-48 items-center justify-center rounded-sm border border-dashed border-maroon/30 bg-white text-center text-sm text-charcoal/50">
-              <div>
-                <MapPin className="mx-auto h-6 w-6 text-copper" />
-                <p className="mt-2">
-                  Map placeholder
-                  <br />
-                  <span className="text-xs">
-                    Embed a Google Map here when a physical address is available.
-                  </span>
-                </p>
-              </div>
-            </div>
           </Reveal>
 
           {/* Form */}
