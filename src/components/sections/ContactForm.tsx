@@ -48,6 +48,8 @@ export function ContactForm() {
         subject: "New inquiry from Brownstone website",
         from_name: "Brownstone Website",
         ...Object.fromEntries(data.entries()),
+        // Set reply-to as the customer's email so you can reply directly.
+        replyto: String(data.get("email") || ""),
       };
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",

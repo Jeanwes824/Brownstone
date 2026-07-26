@@ -19,11 +19,10 @@ export const site = {
     phoneHref: "tel:+639171609764",
   },
   // Contact form delivery (Web3Forms — free, no backend required).
-  // 1. Go to https://web3forms.com, enter the email that should receive
-  //    inquiries, and copy the Access Key they send you.
-  // 2. Paste it below (replacing YOUR_WEB3FORMS_ACCESS_KEY) and redeploy.
-  // Until a real key is set, the form will show a friendly error on submit.
-  web3formsAccessKey: "YOUR_WEB3FORMS_ACCESS_KEY",
+  // Key is registered to admin@brownstonedredging.com; submissions are
+  // emailed there. To change the destination, create a new key at
+  // https://web3forms.com with the desired email and replace it below.
+  web3formsAccessKey: "bc101b0b-59e2-4673-833f-32750a61e3e9",
   social: {
     facebook: "#",
     linkedin: "#",
