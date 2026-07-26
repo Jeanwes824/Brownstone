@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Offset in-page anchors so the sticky header doesn't cover section tops */
+    scroll-padding-top: 7rem;
+  }
+
+  body {
+    @apply bg-white text-charcoal font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  ::selection {
+    @apply bg-copper text-white;
+  }
+}
+
+@layer components {
+  /* Uppercase eyebrow label above section headings */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-copper font-heading font-semibold
+      uppercase tracking-[0.2em] text-sm;
+  }
+
+  /* Logo bracket motif — an open "[ ]" corner accent */
+  .bracket-accent::before {
+    content: "";
+    @apply absolute -top-3 -left-3 h-8 w-8 border-t-2 border-l-2 border-copper;
+  }
+  .bracket-accent::after {
+    content: "";
+    @apply absolute -bottom-3 -right-3 h-8 w-8 border-b-2 border-r-2 border-copper;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

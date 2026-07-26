@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:kwansingmarine.com)",
+      "Bash(npm --version)",
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(node \"C:/Users/jeans/AppData/Local/Temp/claude/C--Users-jeans-Desktop-Brownstone-Website/89d3d6dc-fa4c-4706-820e-e44092281cd8/scratchpad/gen-placeholders.mjs\" \"C:/Users/jeans/Desktop/Brownstone Website\")",
+      "Bash(node ./gen-placeholders.mjs \"C:/Users/jeans/Desktop/Brownstone Website\")",
+      "Bash(node -e \"const s=require\\('sharp'\\); s\\('public/images/brand/logo.png'\\).metadata\\(\\).then\\(m=>console.log\\('logo.png:', m.width+'x'+m.height, m.format, m.hasAlpha?'alpha':'no-alpha'\\)\\)\")",
+      "Bash(node gen-logo-white.mjs)",
+      "Bash(rm gen-logo-white.mjs)",
+      "Bash(node -e \"const s=require\\('sharp'\\); s\\('public/images/brand/logo-white.png'\\).metadata\\(\\).then\\(m=>console.log\\('white:', m.width+'x'+m.height, m.hasAlpha?'alpha':'no-alpha'\\)\\)\")",
+      "mcp__0ca59155-76e8-418c-bbb9-98cf271a956c__models_explore",
+      "mcp__0ca59155-76e8-418c-bbb9-98cf271a956c__media_import_url",
+      "mcp__0ca59155-76e8-418c-bbb9-98cf271a956c__generate_image",
+      "mcp__0ca59155-76e8-418c-bbb9-98cf271a956c__show_generations",
+      "Bash(curl -s -o projects-hero.png __TRACKED_VAR__/hf_20260726_070108_0ec23996-8058-4b1a-a0fa-f196efa502c0.png)",
+      "Bash(curl -s -o about-hero.png __TRACKED_VAR__/hf_20260726_070111_52300533-be33-43c8-a6d6-a490211f4973.png)",
+      "Bash(curl -s -o about-main.png __TRACKED_VAR__/hf_20260726_070123_68aab56c-cade-4b69-84ca-e515b970f733.png)",
+      "Bash(curl -s -o about-story.png __TRACKED_VAR__/hf_20260726_070131_f3d3cfe6-0f10-469c-9465-e729f0b0e073.png)",
+      "Bash(curl -s -o why-choose-us-bg.png __TRACKED_VAR__/hf_20260726_070134_66f276a8-e213-4c9a-a6ec-7afc2905170e.png)",
+      "Bash(node convert-images.mjs \"C:/Users/jeans/AppData/Local/Temp/claude/C--Users-jeans-Desktop-Brownstone-Website/89d3d6dc-fa4c-4706-820e-e44092281cd8/scratchpad/gen\")",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(node fetch-projects.mjs)",
+      "Bash(git init *)",
+      "Bash(git config *)",
+      "Bash(git add *)"
+    ]
+  }
+}
