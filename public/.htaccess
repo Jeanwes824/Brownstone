@@ -11,17 +11,28 @@ ErrorDocument 404 /404.html
 #   RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # </IfModule>
 
-# Cache static assets aggressively (they have hashed names / are stable)
+# Caching policy
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
+  # HTML must NOT be cached, so content updates appear immediately
+  ExpiresByType text/html "access plus 0 seconds"
+  # Build assets have content-hashed names, so cache them long
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/javascript "access plus 1 year"
   ExpiresByType font/woff2 "access plus 1 year"
-  ExpiresDefault "access plus 1 week"
+  # Images cached moderately (swappable without new filenames)
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresDefault "access plus 1 hour"
+</IfModule>
+
+# Explicitly prevent HTML caching (belt and suspenders)
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate, max-age=0"
+  </FilesMatch>
 </IfModule>
 
 # Gzip compression
