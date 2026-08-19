@@ -15,7 +15,7 @@ import { Target, Eye, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: `${site.name} (formerly ${site.formerName}) is comprised of marine experts who have completed projects since ${site.experienceSince} — over 40 years of combined experience across Asia and Micronesia.`,
+  description: `${site.name} is comprised of marine experts who have completed projects since ${site.experienceSince} — over 40 years of combined experience, including work delivered as ${site.formerName}, across Asia and Micronesia.`,
 };
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About Us"
-        subtitle={`Formerly known as ${site.formerName} — a team of marine experts with over 40 years of combined experience.`}
+        subtitle={`A team of marine experts with over 40 years of combined experience — including work delivered as ${site.formerName}.`}
         breadcrumb="About Us"
         image="/images/about-hero.jpg"
       />
@@ -61,10 +61,10 @@ export default function AboutPage() {
                 Built on Over 40 Years of Marine Expertise
               </h2>
               <p className="mt-5 leading-relaxed text-charcoal/75">
-                {site.name} — formerly known as {site.formerName} — is comprised
-                of marine experts who have completed marine and civil
-                infrastructure projects since {site.experienceSince}. With more
-                than 40 years of combined experience, our team operates in
+                {site.name} is comprised of marine experts whose track record —
+                including work delivered as {site.formerName} — spans marine and
+                civil infrastructure projects since {site.experienceSince}. With
+                more than 40 years of combined experience, our team operates in
                 coastal, offshore, and inland marine environments, serving both
                 government and private-sector clients with recognized expertise.
               </p>

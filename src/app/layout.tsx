@@ -61,7 +61,6 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: site.name,
-    alternateName: site.formerName,
     description,
     foundingDate: String(site.founded),
     email: site.contact.email,
