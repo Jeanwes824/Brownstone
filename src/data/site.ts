@@ -1,7 +1,6 @@
 export const site = {
   name: "Brownstone Dredging & Infrastructure",
   shortName: "Brownstone",
-  formerName: "Kwan Sing Marine",
   founded: 2026, // Brownstone Dredging & Infrastructure was established this year
   experienceSince: 1981, // the team's marine project experience dates back to 1981
   yearsExperience: "40+",

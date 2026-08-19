@@ -17,7 +17,7 @@ export function Footer() {
             <p className="mt-6 text-sm leading-relaxed text-white/70">
               {site.name} — a team of marine experts delivering dredging, marine
               construction, and civil infrastructure with over 40 years of
-              combined experience, including work delivered as {site.formerName}.
+              combined experience.
             </p>
             <div className="mt-6 flex gap-3">
               <a
@@ -123,8 +123,7 @@ export function Footer() {
             rights reserved. <span className="text-copper">]</span>
           </p>
           <p>
-            Marine experts since {site.experienceSince} · Incl. work delivered
-            as {site.formerName}
+            Marine experts · 40+ years of combined experience
           </p>
         </div>
       </div>
