@@ -6,7 +6,18 @@ export type TeamMember = {
 
 // Leadership portraits live at /public/images/team/<file>.jpg (800 × 1000, 4:5).
 // Replace the placeholder files with real photography — keep the same names.
+// The first two directors' names are intentionally blank for now.
 export const team: TeamMember[] = [
+  {
+    name: "",
+    role: "Director",
+    image: "/images/team/director-1.jpg",
+  },
+  {
+    name: "",
+    role: "Director",
+    image: "/images/team/director-2.jpg",
+  },
   {
     name: "Rommel Zapanta",
     role: "President",

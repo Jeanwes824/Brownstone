@@ -54,10 +54,10 @@ export function WhyChooseUs() {
               Core Competencies That Get the Job Done
             </h2>
             <p className="mt-5 leading-relaxed text-white/75">
-              With over {`${new Date().getFullYear() - 1981}`} years of
-              hands-on experience, our multidisciplinary team brings the
-              expertise, equipment, and discipline required to deliver complex
-              marine and civil works — safely and to specification.
+              With over four decades of combined hands-on experience, our
+              multidisciplinary team brings the expertise, equipment, and
+              discipline required to deliver complex marine and civil works —
+              safely and to specification.
             </p>
             <div className="mt-8 border-l-4 border-copper pl-5">
               <p className="font-heading text-xl font-semibold italic">

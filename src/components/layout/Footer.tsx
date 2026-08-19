@@ -15,9 +15,9 @@ export function Footer() {
           <div>
             <Logo light />
             <p className="mt-6 text-sm leading-relaxed text-white/70">
-              {site.name} — formerly known as {site.formerName}. Delivering
-              marine construction, dredging, and civil infrastructure excellence
-              since {site.established}.
+              {site.name} — formerly known as {site.formerName}. A team of
+              marine experts delivering dredging, marine construction, and civil
+              infrastructure with over 40 years of combined experience.
             </p>
             <div className="mt-6 flex gap-3">
               <a
@@ -123,7 +123,8 @@ export function Footer() {
             rights reserved. <span className="text-copper">]</span>
           </p>
           <p>
-            Formerly {site.formerName} · Established {site.established}
+            Formerly {site.formerName} · Marine experts since{" "}
+            {site.experienceSince}
           </p>
         </div>
       </div>

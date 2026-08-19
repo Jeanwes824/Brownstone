@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { site } from "@/data/site";
-import { ArrowRight, ShieldCheck, Anchor, History, ExternalLink } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
@@ -40,50 +40,6 @@ export function Hero() {
             <Button href="/#services" variant="outlineLight">
               Our Services
             </Button>
-          </div>
-
-          {/* Trust row */}
-          <div className="mt-12 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-white/15 pt-8">
-            <div className="flex items-center gap-3 text-white">
-              <Anchor className="h-6 w-6 text-copper" />
-              <div>
-                <p className="font-heading text-2xl font-bold leading-none">
-                  {site.yearsExperience}
-                </p>
-                <p className="text-sm text-white/70">Years of Experience</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 text-white">
-              <ShieldCheck className="h-6 w-6 text-copper" />
-              <div>
-                <p className="font-heading text-2xl font-bold leading-none">
-                  Since {site.established}
-                </p>
-                <p className="text-sm text-white/70">
-                  Trusted marine contractor
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3 text-white">
-              <History className="h-6 w-6 text-copper" />
-              <div>
-                <p className="text-sm text-white/70 leading-none">
-                  Formerly known as
-                </p>
-                <p className="font-heading text-lg font-bold leading-tight">
-                  {site.formerName}
-                </p>
-              </div>
-            </div>
-            <a
-              href="https://kwansingmarine.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-sm border border-white/40 px-4 py-2.5 font-heading text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:bg-white hover:text-maroon"
-            >
-              <ExternalLink className="h-4 w-4" />
-              Visit Kwan Sing Marine
-            </a>
           </div>
         </div>
       </Container>

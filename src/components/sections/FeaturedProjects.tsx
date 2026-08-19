@@ -16,7 +16,7 @@ export function FeaturedProjects() {
             align="left"
             eyebrow="Our Work"
             title="Featured Projects"
-            description="A selection of landmark marine and infrastructure works delivered across the region."
+            description="A selection of projects completed by members of our team across Asia and Micronesia."
             className="mx-0"
           />
           <Reveal className="hidden md:block">

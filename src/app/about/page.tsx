@@ -15,7 +15,7 @@ import { Target, Eye, Quote } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Us",
-  description: `Established in ${site.established}, ${site.name} (formerly ${site.formerName}) is a leading marine and civil infrastructure contractor serving Asia and Micronesia.`,
+  description: `${site.name} (formerly ${site.formerName}) is comprised of marine experts who have completed projects since ${site.experienceSince} — over 40 years of combined experience across Asia and Micronesia.`,
 };
 
 export default function AboutPage() {
@@ -23,7 +23,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="About Us"
-        subtitle={`Formerly known as ${site.formerName} — a leading name in marine and civil infrastructure since ${site.established}.`}
+        subtitle={`Formerly known as ${site.formerName} — a team of marine experts with over 40 years of combined experience.`}
         breadcrumb="About Us"
         image="/images/about-hero.jpg"
       />
@@ -47,7 +47,7 @@ export default function AboutPage() {
                   {site.yearsExperience}
                 </p>
                 <p className="text-xs uppercase tracking-widest">
-                  Years of Excellence
+                  Years of Experience
                 </p>
               </div>
             </Reveal>
@@ -58,21 +58,21 @@ export default function AboutPage() {
                 Our Story
               </span>
               <h2 className="mt-4 text-3xl font-bold uppercase leading-tight text-maroon md:text-4xl">
-                Excellence in Marine Construction Since {site.established}
+                Built on Over 40 Years of Marine Expertise
               </h2>
               <p className="mt-5 leading-relaxed text-charcoal/75">
-                Established in {site.established}, {site.name} — formerly known
-                as {site.formerName} — has grown to become a leading name in
-                marine and civil infrastructure. The firm operates in coastal,
-                offshore, and inland marine environments, serving both government
-                and private-sector clients with recognized expertise in marine
-                and civil infrastructure works.
+                {site.name} — formerly known as {site.formerName} — is comprised
+                of marine experts who have completed marine and civil
+                infrastructure projects since {site.experienceSince}. With more
+                than 40 years of combined experience, our team operates in
+                coastal, offshore, and inland marine environments, serving both
+                government and private-sector clients with recognized expertise.
               </p>
               <p className="mt-4 leading-relaxed text-charcoal/75">
-                Over four decades, we have delivered breakwaters, ports, wharves,
-                dredging, reclamation, and coastal protection across Asia and
-                Micronesia — always guided by quality, safety, and environmental
-                responsibility.
+                Over four decades, our team has delivered breakwaters, ports,
+                wharves, dredging, reclamation, and coastal protection across
+                Asia and Micronesia — always guided by quality, safety, and
+                environmental responsibility.
               </p>
               <div className="mt-8 border-l-4 border-copper bg-sand p-6">
                 <Quote className="h-7 w-7 text-copper" />
@@ -162,11 +162,11 @@ export default function AboutPage() {
           />
           <div className="mx-auto mt-12 grid max-w-4xl gap-8 sm:grid-cols-3">
             {team.map((member, i) => (
-              <Reveal key={member.name} delay={i * 0.1} className="group text-center">
+              <Reveal key={member.image} delay={i * 0.1} className="group text-center">
                 <div className="relative mx-auto overflow-hidden rounded-sm">
                   <Image
                     src={member.image}
-                    alt={member.name}
+                    alt={member.name || member.role}
                     width={400}
                     height={480}
                     className="h-72 w-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -174,7 +174,7 @@ export default function AboutPage() {
                   <span className="absolute inset-x-0 bottom-0 h-1 bg-copper" />
                 </div>
                 <h3 className="mt-5 font-heading text-lg font-bold uppercase text-maroon">
-                  {member.name}
+                  {member.name || " "}
                 </h3>
                 <p className="text-sm text-copper-dark">{member.role}</p>
               </Reveal>

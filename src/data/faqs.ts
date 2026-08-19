@@ -17,7 +17,7 @@ export const faqs: FAQ[] = [
   {
     question: "How experienced is your team?",
     answer:
-      "Established in 1981, we bring more than 40 years of marine and civil infrastructure experience, backed by skilled marine surveyors, engineers, technicians, and equipment operators.",
+      "Our team brings more than 40 years of combined marine and civil infrastructure experience, having completed projects since 1981, backed by skilled marine surveyors, engineers, technicians, and equipment operators.",
   },
   {
     question: "Do you handle permits and regulatory compliance?",

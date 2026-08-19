@@ -63,7 +63,7 @@ export default function RootLayout({
     name: site.name,
     alternateName: site.formerName,
     description,
-    foundingDate: String(site.established),
+    foundingDate: String(site.founded),
     email: site.contact.email,
     telephone: site.contact.phone,
     areaServed: ["Asia", "Micronesia"],

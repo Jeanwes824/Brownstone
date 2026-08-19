@@ -2,12 +2,11 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { ProjectGallery } from "@/components/projects/ProjectGallery";
 import { CTABanner } from "@/components/sections/CTABanner";
-import { projects } from "@/data/projects";
 
 export const metadata: Metadata = {
   title: "Project Portfolio",
   description:
-    "Explore Brownstone Dredging & Infrastructure's portfolio of marine construction, dredging, port development, reclamation, and coastal protection projects across Asia and Micronesia.",
+    "Projects completed by members of the Brownstone Dredging & Infrastructure team — marine construction, dredging, port development, reclamation, and coastal protection across Asia and Micronesia.",
 };
 
 export default function ProjectsPage() {
@@ -15,7 +14,7 @@ export default function ProjectsPage() {
     <>
       <PageHero
         title="Project Portfolio"
-        subtitle={`${projects.length}+ landmark marine and infrastructure projects delivered across Asia and Micronesia.`}
+        subtitle="Projects completed by members of our team across Asia and Micronesia."
         breadcrumb="Project Portfolio"
         image="/images/projects-hero.jpg"
       />

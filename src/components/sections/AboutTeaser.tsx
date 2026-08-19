@@ -7,7 +7,7 @@ import { site } from "@/data/site";
 import { Award, ShieldCheck, Waves, ArrowRight } from "lucide-react";
 
 const badges = [
-  { icon: Award, label: `${site.yearsExperience} Years of Experience` },
+  { icon: Award, label: "Marine Experts Since 1981" },
   { icon: ShieldCheck, label: "Safety & Environmental Compliance" },
   { icon: Waves, label: "Marine & Civil Expertise" },
 ];
@@ -40,12 +40,14 @@ export function AboutTeaser() {
                 className="h-40 w-full object-cover md:h-48"
               />
             </div>
-            {/* Established badge */}
+            {/* Experience badge */}
             <div className="absolute -left-4 top-8 bg-copper px-5 py-4 text-white shadow-card">
               <p className="font-heading text-3xl font-bold leading-none">
-                {site.established}
+                {site.yearsExperience}
               </p>
-              <p className="text-xs uppercase tracking-widest">Established</p>
+              <p className="text-xs uppercase tracking-widest">
+                Years&apos; Experience
+              </p>
             </div>
           </Reveal>
 
@@ -56,14 +58,15 @@ export function AboutTeaser() {
               Who We Are
             </span>
             <h2 className="mt-4 text-3xl font-bold uppercase leading-tight text-maroon md:text-4xl">
-              A Leading Name in Marine &amp; Civil Infrastructure
+              A Team of Marine &amp; Civil Infrastructure Experts
             </h2>
             <p className="mt-5 leading-relaxed text-charcoal/75">
-              Established in {site.established}, {site.name} — formerly known as{" "}
-              {site.formerName} — has grown to become a leading name in marine
-              and civil infrastructure. We operate in coastal, offshore, and
-              inland marine environments, serving both government and
-              private-sector clients with recognized expertise.
+              {site.name} is comprised of marine experts who have completed
+              dredging and marine construction projects since{" "}
+              {site.experienceSince} — bringing over 40 years of combined
+              experience. Our team operates in coastal, offshore, and inland
+              marine environments, serving both government and private-sector
+              clients with recognized expertise.
             </p>
             <p className="mt-4 leading-relaxed text-charcoal/75">
               From dredging and breakwaters to port development and reclamation,
